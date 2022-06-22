@@ -1,0 +1,206 @@
+=input-field
+  width: 100%
+  height: 34px
+  outline: none
+  background-color: transparent
+  border: none
+  border-bottom: 1px solid #A78587
+  font-family: Montserrat-Medium
+  font-weight: 500
+  font-style: normal
+  font-size: 14px
+  line-height: 18px
+  color: #F6EDE9
+
+=field-placeholder
+  font-family: Montserrat-Medium
+  font-weight: 500
+  font-style: normal
+  font-size: 14px
+  line-height: 18px
+  color: #F6EDE9
+
+.page-feedback
+  position: relative
+  grid-area: feedback
+  background-image: url("../img/feedBackBackgroundImg.png")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  background-color: #343235
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    column-gap: 20px
+
+    & > .section-header
+      grid-column: 1 / -1
+      grid-row: 1 / 2
+      margin-top: 80px
+
+      & > .section-header__heading
+        color: #EEE9E6
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+      & > .section-header__background-text
+        color: rgba(154, 133, 132, 0.1)
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+  &__paragraph
+    grid-column: 2 / span 5
+    grid-row: 2 / 3
+    margin: 36px 0 0 0
+    font-family: Montserrat-Medium
+    font-weight: 500
+    font-style: normal
+    font-size: 18px
+    line-height: 32px
+    color: rgba(238, 233, 230, 0.6)
+    width: 470px
+    height: 64px
+
+  &__paragraph-modal
+    margin-left: 40px
+    margin-bottom: 80px
+    color: white
+
+
+  &__feedback-form
+    grid-column: 2 / span 5
+    grid-row: 3 / 4
+    margin-top: 44px
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-areas: "name name name name name" "phone phone phone phone phone" "period period . agreements agreements" "button button button button button"
+    grid-gap: 25px 20px
+    margin-bottom: 70px
+
+    &__modal
+      width: 600px
+
+    &__name
+      grid-area: name
+      margin-bottom: 11px
+
+      &__name-input
+        +input-field
+
+        &::placeholder
+          +field-placeholder
+
+      &__name-input-modal
+        margin-left: 40px
+        width: 400px
+
+    &__phone
+      grid-area: phone
+      margin-bottom: 19px
+
+      &__phone-input
+        +input-field
+
+        &::placeholder
+          +field-placeholder
+
+      &__phone-input-modal
+        margin-left: 40px
+        width: 400px
+
+    &__period
+      grid-area: period
+
+      &__select
+        +field-placeholder
+        margin-top: 20px
+        padding: 16px 0 16px 20px
+        width: 178px
+        border: 1px solid #A78587
+        background-color: transparent
+        appearance: none
+        background-image: url('../img/icons/select-arrow.svg')
+        background-repeat: no-repeat
+        background-position: center right 18px
+        outline: none
+        cursor: pointer
+
+    &__agreements
+      grid-area: agreements
+      margin-top: 25px
+      
+    &__agreements label
+      +field-placeholder
+      display: block
+      position: relative
+      color: #FFF
+
+      &::before
+        content: ''
+        position: absolute
+        left: -43px
+        top: 5px
+        width: 27px
+        height: 27px
+        border: 1px solid #A78587
+        box-sizing: border-box
+        cursor: pointer
+
+    &__agreements input:checked + label::after
+      content: ''
+      position: absolute
+      left: -37px
+      top: 7px
+      width: 24px
+      height: 16px
+      background-image: url("../img/icons/checkbox.svg")
+      background-repeat: no-repeat
+      backgorund-position: center
+      background-size: cover
+      cursor: pointer
+
+    &__feedback
+      grid-area: button
+      margin-top: 35px
+
+    &__feedback-btn
+      font-family: Montserrat-Bold
+      font-size: 700
+      font-style: normal
+      font-size: 12px
+      line-height: 20px
+      width: 100%
+      height: 52px
+      background-color: transparent
+      border: 0
+      border-top: 1px solid #A78587
+      border-bottom: 1px solid #A78587
+      color: #A78587
+      outline: none
+      cursor: pointer
+      transition: all 0.15s ease-in-out
+      &:hover
+        background: #A78587
+        color: white
+
+    &__feedback-btn-modal
+      margin-left: 40px
+      width: 200px
+      cursor: pointer
+      transition: all 0.15s ease-in-out
+      &:hover
+        background: #A78587
+        color: white
+
+  &__img-map
+    grid-column: 8 / span 5
+    grid-row: 1 / 5

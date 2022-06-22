@@ -1,0 +1,124 @@
+=slider-btn
+  margin: auto
+  border: none
+  border-radius: 50%
+  background-color: #343235
+  background-image: url('../img/secondSlider/arrow.svg')
+  background-repeat: no-repeat
+  background-position: center
+  width: 72px
+  height: 72px
+  outline: none
+  
+.page-projects
+  grid-area: projects
+  padding-top: 132px
+  padding-bottom: 120px
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-gap: 20px
+
+    & > .section-header
+      grid-column: 1 / -1
+      margin-bottom: 24px
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -khtml-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+
+  &__slider
+    grid-column: 1 / -1
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-gap: 20px
+    // width: 1166px
+    // height: 660px
+    
+    &__wrapper
+      grid-column: 2 / span 10
+      grid-row: 1 / -1
+      width: 968px
+      height: 660px
+
+    &__slide
+      display: grid
+      grid-template-columns: auto auto
+      grid-template-rows: 1fr auto
+      // width: 968px
+      // height: 660px
+
+      &__img
+        grid-column: 1 / -1
+        grid-row: 1 / -1
+
+      &__content
+        grid-column: 1 / -1
+        grid-row: 2 / span 1
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background: rgba(52, 50, 53, 0.9)
+
+        &__description
+          font-family: OldStandardTT-Regular
+          font-weight: 400
+          font-style: normal
+          font-size: 32px
+          line-height: 36px
+          margin-left: 36px
+          color: #F5F2ED
+
+        &__btn
+          grid-template-columns: auto auto
+          margin: 0 35px 0 0
+          font-family: Montserrat-Bold
+          font-weight: 700
+          font-style: normal
+          font-size: 12px
+          line-height: 16px
+          text-align: center
+          color: #F5F2ED
+          text-transform: uppercase
+          text-decoration: none
+          transition: all 0.2s ease-in-out
+          &:hover
+            transform: translateX(2px)
+
+          &::after
+            content: ''
+            display: inline-block
+            width: 33px
+            height: 8px
+            margin: 4px 0 0 15px
+            background-image: url('../img/secondSlider/smallArrow.svg')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            transition: all 0.2s ease-in-out
+          &:hover:after
+            transform: translateX(10px)
+
+    &__btnPrev
+      grid-column: 1 / span 1
+      grid-row: 1 / -1
+      +slider-btn
+      transition: 0.2s all ease-in-out
+      cursor: pointer
+
+      &:hover
+        background-color: #242325
+      
+    &__btnNext
+      grid-column: 12 / span 1
+      grid-row: 1 / -1
+      +slider-btn
+      transform: rotate(180deg)
+      transition: 0.2s all ease-in-out
+      cursor: pointer
+
+      &:hover
+        background-color: #242325

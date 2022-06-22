@@ -1,0 +1,117 @@
+.page-best-offers
+  grid-area: best-offers
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  column-gap: 20px
+
+  & > .section-header
+    grid-column: 1 / -1
+    margin-bottom: 34px
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+  &__container
+    display: grid
+    grid-column: 1 / -1
+    grid-template-columns: repeat(12, 1fr)
+    grid-gap: 20px
+    padding: 0
+    margin: 0
+    list-style: none
+
+  &__btn
+    grid-column: 6 / 8
+    margin-top: 40px
+    border: none
+    background-color: transparent
+
+  &__product-card
+    grid-column: span 4
+    display: grid
+    row-gap: 20px
+    background-color: #FFF
+    width: 375px
+    height: 504px
+    transition: 0.25s all
+
+    &__horizontal
+      grid-column: span 6
+      display: grid
+      row-gap: 20px
+      grid-template-columns: 1fr auto
+      width: 573px
+      height: 264px
+
+    &__img
+      display: flex
+      max-height: 100%
+      max-width: 100%
+      // object-fit: contain
+      // overflow: hidden
+
+    &__content
+      display: grid
+      grid-template-rows: repeat(4, auto)
+      row-gap: 20px
+
+      &__product-name
+        font-family: OldStandardTT-Regular
+        font-weight: 400
+        font-style: normal
+        font-size: 32px
+        line-height: 36px
+        margin: 16px 0px 0px 36px
+        color: #695A59
+
+      &__product-price
+        font-family: Montserrat-Bold
+        font-weight: 700
+        font-style: normal
+        font-size: 22px
+        line-height: 24px
+        margin: 0px 0px 0px 36px
+        color: #343235
+
+        &__about
+          font-family: Montserrat-Medium
+          font-weight: 500
+          font-style: normal
+          font-size: 14px
+          line-height: 20px
+          margin: 0px 0px 0px 36px
+          color: #695A59
+
+      &__product-order
+        font-family: Montserrat-Bold
+        font-weight: 700
+        font-style: normal
+        font-size: 12px
+        line-height: 16px
+        margin: 12px 0px 40px 36px
+        color: #9A8584
+        text-transform: uppercase
+        text-decoration: none
+        transition: all 0.2s ease-in-out
+        &:hover
+          transform: translateX(2px)
+        &::after
+          content: ''
+          display: inline-block
+          position: relative
+          width: 81px 
+          height: 8px
+          left: 0
+          top: 0
+          margin-left: 16px
+          background-image: url('../img/icons/brownArrow.svg')
+          background-repeat: no-repeat
+          transition: all 0.2s ease-in-out
+        &:hover:after
+          transform: translateX(20px)
+  
+    &:hover
+       box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px

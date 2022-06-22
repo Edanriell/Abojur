@@ -1,0 +1,156 @@
+$header-backgroundColor: #F8F6F5
+$header-textColor: #695A59
+$header-mainFont: Montserrat-Medium
+
+=textStyles
+  font-family: $header-mainFont
+  font-weight: 500
+  font-style: normal
+  font-size: 14px
+  color: $header-textColor
+
+=header-icons
+  content: ''
+  margin-left: auto
+  margin-right: auto
+  width: 18px
+  height: 18px
+  background-image: url('../img/icons/phone.svg')
+  background-repeat: no-repeat
+  background-position: center
+
+=burgerBtn-svg
+  position: absolute
+  top: 0
+  left: 0
+  border-radius: 1px
+
+.header-container
+  background-color: $header-backgroundColor
+
+.page-header
+  grid-area: header
+  display: grid
+  grid-template-columns: repeat(12,1fr)
+  grid-template-row: auto 100px
+  grid-gap: 20px
+  // height: 200px
+  height: 96px
+  transition: 0.25s all
+
+  &__logo
+    margin: 22px 0 23px 0
+    grid-column: 1 / span 4
+    grid-row: 1 / 2
+    text-decoration: none
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 375px
+    height: 51px
+
+    &__img
+      width: 141px
+      height: 51px
+      text-align: left
+      padding-right: 12px
+
+    &__text
+      +textStyles
+      margin: 0
+      line-height: 20px
+      text-align: left
+
+  &__phone
+    grid-column: 7 / span 2
+    grid-row: 1 / 2
+    display: grid
+    grid-template-columns: repeat(2, auto)
+    margin: 24px 0 24px 0
+    +textStyles
+    line-height: 24px
+    text-decoration: none
+    height: 48px
+
+    &__call
+      +textStyles
+      line-height: 24px
+      grid-column: 2
+    
+    span
+      text-decoration: underline
+
+    &:before
+      +header-icons
+      margin-top: auto
+      margin-bottom: auto
+
+  &__address
+    grid-column: 9 / span 3
+    grid-row: 1 / 2
+    display: grid
+    grid-template-columns: repeat(2, auto)
+    margin: 24px 0 24px 0
+    +textStyles
+    line-height: 24px
+
+    &:before
+      +header-icons
+      width: 16px
+      height: 20px
+      background-image: url('../img/icons/place.svg')
+      margin-top: 2px
+
+  &__burger-menu
+    grid-column: 12
+    text-align: right
+    grid-row: 1 / 2
+
+    &__btn
+      position: relative
+      padding: 0
+      margin: 32px 0 32px 0
+      width: 36px
+      height: 32px
+      background-color: inherit
+      border: none
+      outline: none
+      cursor: pointer
+
+      &__top-line
+        +burgerBtn-svg
+        transition: 0.25s all
+
+      &__middle-line
+        +burgerBtn-svg
+        top: 15px
+        left: 5px
+        transition: 0.25s all
+
+      &__bottom-line
+        +burgerBtn-svg
+        top: 30px
+        transition: 0.25s all
+
+.main-nav
+  grid-row: 2 / 3
+  grid-column: 1 / -1
+  margin-bottom: 8px
+
+  &__items
+    list-style: none
+    display: flex
+    flex-flow: row wrap
+    padding: 0
+    
+    &__menu-item
+      margin: 0 60px 0 0
+
+    &__menu-item__link
+      text-decoration: none
+      color: #A78587
+
+      &:hover
+        color: #695A59
+        border-bottom: 1px solid #695A59
+        transition: 0.4s all

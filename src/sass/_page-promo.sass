@@ -1,0 +1,68 @@
+$promo-backgroundColor: #343235
+$promo-textColor: #EEE9E6
+
+.promo-container
+  background-image: url('../img/promo-background.png')
+  background-repeat: no-repeat
+  background-position: center bottom 160px
+  background-size: cover
+
+.page-promo
+  grid-area: promo
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  grid-template-rows: repeat(3, auto) 160px
+  column-gap: 20px
+  padding: 80px 0 0 0
+
+  &__headline-text
+    grid-area: 1 / 2 / 2 / 7
+    margin: 0
+    font-family: OldStandardTT-Regular
+    font-weight: 400
+    font-style: normal
+    font-size: 46px
+    line-height: 64px
+    text-transform: uppercase
+    color: $promo-textColor
+
+  &__subtitle-text
+    grid-area: 2 / 2 / 3 / 7
+    margin: 0
+    margin-top: 16px
+    font-family: Montserrat-Medium
+    font-weight: 500
+    font-style: normal
+    font-size: 18px
+    line-height: 32px
+    color: rgba(238, 233, 230, 0.6)
+
+  &__consultation
+    grid-area: 3 / 2 / 3 / 5
+    margin-top: 36px
+    margin-bottom: 80px
+
+  &__slider
+    grid-area: 1 / 7 / 5 / -1
+    width: 573px
+    height: 520px
+
+    &__wrapper
+      width: 573px
+      height: 520px
+
+    &__slide
+      width: 573px
+      height: 520px
+      position: relative
+
+      &__paused::before
+        content: ''
+        position: absolute
+        width: 80px
+        height: 80px
+        top: 45%
+        left: 45%
+        background-image: url('../img/icons/pause.svg')
+        background-repeat: no-repeat
+        background-position: center

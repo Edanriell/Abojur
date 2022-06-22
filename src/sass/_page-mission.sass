@@ -1,0 +1,111 @@
+=mission-text
+  font-family: Montserrat-Medium
+  font-weight: 500
+  font-style: normal
+  font-size: 18px
+  line-height: 32px
+  color: #FBF3F0
+  z-index: 1
+  
+.page-mission
+  grid-area: mission
+  position: relative
+  background-color: #343235
+  padding-top: 120px
+  padding-bottom: 132px
+  z-index: 1
+
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 320px
+    left: 0
+    top: 598px
+    background-image: url("../img/missionBackground.png")
+    background-position: cover
+    z-index: -1
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: 110px auto auto 140px 200px
+    grid-gap: 20px
+    z-index: 1
+
+    & > .section-header
+      grid-column: 7 / -1
+      grid-row: 1 / 2
+      margin-top: 11px
+      z-index: 1
+
+      & > .section-header__heading
+        margin-left: 198px
+        color: #EEE9E6
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+      & > .section-header__background-text
+        color: rgba(154, 133, 132, 0.1)
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+  &__first-paragraph
+    grid-column: 8 / span 5
+    grid-row: 2 / 3
+    margin: 24px 0 0 0
+    +mission-text
+
+  &__second-paragraph
+    grid-column: 8 / span 5
+    grid-row: 3 / 4
+    margin: 0 0 44px 0
+    +mission-text
+
+  &__big-box
+    grid-column: 1 / span 6
+    grid-row: 1 / span 4
+    z-index: 1
+    position: relative
+  
+  &__playBtn
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: #343235
+    width: 97px
+    height: 97px
+    border-radius: 50%
+    transition: all 0.3s ease
+    border: none
+    cursor: pointer
+    &:hover
+      background: #2d2c2e
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background: url("../img/icons/play2.svg") no-repeat center
+      width: 17px
+      height: 17px
+
+  &__medium-box
+    grid-column: 7 / span 6
+    grid-row: 4 / span 2
+    z-index: 1
+
+  &__small-box
+    grid-column: 4 / span 3
+    grid-row: 5 / -1
+    z-index: 1

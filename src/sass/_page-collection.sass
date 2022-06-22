@@ -1,0 +1,80 @@
+.page-collection
+  grid-area: collection
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  grid-template-rows: repeat(3, auto)
+  grid-gap: 20px
+  padding-top: 120px
+  padding-bottom: 120px
+
+  & > .section-header
+    grid-column: 1 / -1
+    grid-row: 1 / 2
+
+    & > .section-header__heading
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -khtml-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+
+    & > .section-header__background-text
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -khtml-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+
+  &__description
+    grid-column: 2 / 8
+    grid-row: 2 / 3
+    margin: 16px 0 20px 0
+    font-family: Montserrat-Medium
+    font-weight: 500
+    font-style: normal
+    font-size: 18px
+    line-height: 32px
+    color: #695A59
+
+  &__gallery
+    grid-column: 1 / -1
+    grid-row: 3 / 4
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+    grid-gap: 20px
+    list-style: none
+    margin: 0
+    padding: 0
+    cursor: pointer
+
+    &__img
+      grid-column: span 6
+      grid-row: span 1
+      width: 573px
+      height: 240px
+      transition: 0.40s all
+      overflow: hidden
+
+      &:hover
+        filter: brightness(70%)
+
+        &:before
+          content: ''
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%) rotate(270deg)
+          background-image: url('../img/icons/zoom-in.svg')
+          background-repeat: no-repeat
+          width: 86px
+          height: 86px
+          z-index: 1
+
+    &__img-big
+      grid-column: span 6
+      grid-row: span 2
+      width: 573px
+      height: 500px

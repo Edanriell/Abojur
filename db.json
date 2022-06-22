@@ -1,0 +1,109 @@
+{
+  "bestOffers": [
+    {
+      "id": 0,
+      "imgAlt": "Подушки Casa Nova",
+      "name": "Подушки Casa Nova",
+      "price": "15 000",
+      "pricePolitics": "стоимость варьируется в зависимости от размера изделия",
+      "cardWidth": 375,
+      "cardHeight": 240
+    },
+    {
+      "id": 1,
+      "imgAlt": "Покрывало ШАНТИ",
+      "name": "Покрывало ШАНТИ",
+      "price": "13 660",
+      "pricePolitics": "стоимость варьируется в зависимости от размера изделия",
+      "cardWidth": 375,
+      "cardHeight": 240
+    },
+    {
+      "id": 2,
+      "imgAlt": "Подушки Elixir №7",
+      "name": "Подушки Elixir №7",
+      "price": "15 000",
+      "pricePolitics": "стоимость варьируется в зависимости от размера изделия",
+      "cardWidth": 375,
+      "cardHeight": 240
+    },
+    {
+      "id": 3,
+      "imgAlt": "Подушки Casa Nova",
+      "name": "Подушки Casa Nova",
+      "price": "15 000",
+      "pricePolitics": "стоимость варьируется в зависимости от размера изделия",
+      "cardWidth": 375,
+      "cardHeight": 240
+    },
+    {
+      "id": 4,
+      "imgAlt": "Покрывало ШАНТИ",
+      "name": "Покрывало ШАНТИ",
+      "price": "13 660",
+      "pricePolitics": "стоимость варьируется в зависимости от размера изделия",
+      "cardWidth": 375,
+      "cardHeight": 240
+    },
+    {
+      "id": 5,
+      "imgAlt": "Подушки Elixir №7",
+      "name": "Подушки Elixir №7",
+      "price": "15 000",
+      "pricePolitics": "стоимость варьируется в зависимости от размера изделия",
+      "cardWidth": 375,
+      "cardHeight": 240
+    }
+  ],
+  "requests": [
+    {
+      "name": "Test1",
+      "phone": "12312312",
+      "period": "Day",
+      "agreements": "on",
+      "id": 1
+    },
+    {
+      "name": "TEST2222222222222222",
+      "phone": "3141414141451414",
+      "period": "Evening",
+      "agreements": "on",
+      "id": 2
+    },
+    {
+      "name": "TEsT",
+      "phone": "21312",
+      "period": "Day",
+      "agreements": "on",
+      "id": 3
+    },
+    {
+      "name": "fafa",
+      "phone": "45",
+      "id": 4
+    },
+    {
+      "name": "Test",
+      "phone": "Test",
+      "period": "Day",
+      "id": 5
+    }
+  ],
+  "requests-modal": [
+    {
+      "name": "Test1-modal",
+      "phone": "123123",
+      "id": 1
+    },
+    {
+      "name": "TESRT222",
+      "phone": "3141414141451414",
+      "id": 2
+    },
+    {
+      "name": "TEST221321",
+      "phone": "asdf",
+      "id": 3
+    }
+  ]
+}

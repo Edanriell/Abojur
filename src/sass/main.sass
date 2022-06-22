@@ -1,0 +1,134 @@
+@import "~normalize.css"
+
+@import "montserrat"
+@import "old-standard-tt"
+
+@import "page-header"
+@import "page-promo"
+@import "page-about"
+@import "page-best-offers"
+@import "page-projects"
+@import "page-mission"
+@import "page-team"
+@import "page-collection"
+@import "page-feedback"
+@import "page-animations"
+@import "page-error"
+@import "page-modal"
+
+html
+  scroll-behavior: smooth
+
+body
+  min-width: 1366px
+  font-family: Montserrat-Regular
+  font-size: 18px
+  font-style: normal
+  line-height: 32px
+  color: #695A59
+  font-weight: 500
+  background-color: #EEE8E6
+
+.container
+  width: 1166px
+  margin: 0 auto
+  padding-left: 100px
+  padding-right: 100px
+
+.visually-hidden
+  position: absolute
+  clip: rect(1px, 1px, 1px, 1px)
+  padding: 0
+  border: 0
+  height: 1px
+  width: 1px
+  overflow: hidden
+
+.page
+  display: grid
+  grid-template-areas: "header" "promo" "about" "best-offers" "projects" "mission" "team" "collection" "feedback"
+  grid-template-rows: 1fr repeat(8, auto)
+  min-height: 100vh
+
+.section-header
+  display: grid
+  grid-template-rows: 1fr
+  grid-template-columns: 1fr
+  position: relative
+
+  &__heading
+    grid-row: 1 / 2  
+    grid-column: 1 / 2
+    font-family: OldStandardTT-Regular
+    font-weight: 400
+    font-style: normal
+    font-size: 42px
+    line-height: 54px
+    color: #695A59
+    z-index: 2
+    text-transform: uppercase
+    margin: 0 0 0 99px
+    position: absolute
+    top: 40%
+    left: 16.7%
+    transform: translate(-50%, -50%)
+    width: 387px
+
+  &__background-text
+    grid-row: 1 / 2
+    grid-column: 1 / 2  
+    margin: 0
+    font-family: OldStandardTT-Regular
+    font-weight: 400
+    font-style: normal
+    font-size: 140px
+    line-height: 110px
+    color: rgba(234, 225, 220, 1)
+    z-index: 1
+    text-transform: uppercase
+    
+.btn
+  display: inline-block
+  font-family: Montserrat-Bold
+  padding-top: 18px
+  padding-bottom: 14px
+  font-weight: 700
+  font-style: normal
+  font-size: 12px
+  line-height: 20px
+  color: #A78587
+  text-decoration: none
+  width: 228px
+  border-top: 1px solid #A78587
+  border-bottom: 1px solid #A78587
+  text-align: center
+  text-transform: uppercase
+  transition: all 0.15s ease-in-out
+  cursor: pointer
+  &:hover
+    background: #A78587
+    color: white
+    
+
+.pageup
+  opacity: 0
+  width: 64px
+  height: 64px
+  position: fixed
+  bottom: 100px
+  right: 5%
+  z-index: 2
+  background-color: #F5F2ED
+  cursor: pointer
+  border-radius: 50%
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px
+  border: 2px solid #F5F2ED
+
+  &__up
+    border-radius: 50%
+    width: 64px
+    height: 64px
+    transition: linear 0.1s
+
+    &:hover
+      background-color: #fff

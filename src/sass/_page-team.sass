@@ -1,0 +1,64 @@
+=team-text
+  font-family: Montserrat-Medium
+  font-weight: 500
+  font-style: normal
+  color: #FBF3F0
+
+.page-team
+  grid-area: team
+  background-color: #343235
+  padding-bottom: 120px
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: repeat(4, auto)
+    grid-gap: 20px
+
+    & > .section-header
+      grid-column: 1 / -1
+
+      & > .section-header__heading
+        color: #EEE9E6
+        width: 454px
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+      & > .section-header__background-text
+        color: rgba(154, 133, 132, 0.1)
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+  &__paragraph
+    grid-column: 2 / 7
+    grid-row: 3 / span 1
+    margin: 0 0 20px 0
+    +team-text
+    font-size: 18px
+    line-height: 32px
+    width: 573px
+
+    &:nth-child(2)
+      grid-row: 2 / span 1
+      margin: 29px 0 0 0
+
+  &__paragraph-aside
+    grid-column: 9 / 13
+    grid-row: 2 / 3
+    margin: 29px 0 auto 0
+    +team-text
+    font-size: 14px
+    line-height: 24px
+    width: 368px
+
+  &__big-img
+    grid-column: 1 / -1
+    grid-row: 4 / 5
