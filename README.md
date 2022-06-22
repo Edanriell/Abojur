@@ -1,2 +1,2 @@
-# Skincare
-![Skincare](https://github.com/Edanriell/oldProjects-2/blob/master/AnimatedText/skincare.png?raw=true)
+# Abojur
+![Abojur](https://github.com/Edanriell/Abojur/blob/master/abojur.png?raw=true)
